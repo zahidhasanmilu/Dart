@@ -61,7 +61,7 @@ void main(){
 //     print("Your Age $age, and You are UnderAge for NID.");
 //   }
 // }
-*/
+
 import 'dart:io';
 void main(){
   stdout.write("Enter student marks here : ");
@@ -90,5 +90,52 @@ void main(){
     print("Your Mark $mark\nYou Failed.");
   }
 
+}
+
+
+
+
+//---------------------------1) Even / Odd Checker-----------------------------
+import 'dart:io';
+
+void main(){
+  stdout.write("Enter the number: ");
+
+  String? input = stdin.readLineSync();
+  int? num = int.tryParse(input??"");
+
+  if (num==null){
+    print("Input Invalid");
+    return;
+  }
+  if (num%2==0){
+    print("Your Input Number: $num and This is Even.");
+  }else{
+    print("Your Input Number: $num and This is Odd.");
+  }
+}
+
+*/
+
+//--------------------------Simple Login System-----------------------------
+import 'dart:io';
+
+void main() {
+  stdout.write("Enter email: ");
+  String? email = stdin.readLineSync();
+
+  stdout.write("Enter password: ");
+  String? password = stdin.readLineSync();
+
+  if (email == null || email.isEmpty || password == null || password.isEmpty) {
+    print("Input missing ❌");
+    return;
+  }
+
+  if (email == "admin@gmail.com" && password == "1234") {
+    print("Login Successful");
+  } else {
+    print("Invalid Credentials");
+  }
 }
 
